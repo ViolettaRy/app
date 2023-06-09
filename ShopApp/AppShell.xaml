@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShopApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShopApp"
+    xmlns:pages="clr-namespace:ShopApp.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="True">
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+        Title="Учет продуктов"
+        ContentTemplate="{DataTemplate pages:ProductPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Справочник продуктов"
+        ContentTemplate="{DataTemplate pages:TemplatePage}">
+        </ShellContent>
+        <ShellContent
+        Title="Справочник категорий"
+        ContentTemplate="{DataTemplate pages:CategoryPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Справочник животных"
+        ContentTemplate="{DataTemplate pages:AnimalPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Справочник поставщиков"
+        ContentTemplate="{DataTemplate pages:ProviderPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Справочник Марок"
+        ContentTemplate="{DataTemplate pages:MarkPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Выручка"
+        ContentTemplate="{DataTemplate pages:RevenuePage}">
+        </ShellContent>
+        <ShellContent
+        Title="Прибыль"
+        ContentTemplate="{DataTemplate pages:StatisticPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Ревизия"
+        ContentTemplate="{DataTemplate pages:RevisionPage}">
+        </ShellContent>
+    </FlyoutItem>
+</Shell>
