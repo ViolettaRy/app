@@ -76,7 +76,6 @@ public class AppRepository : IDisposable
             entity.Category = cat.Name;
             var prov = database.Table<Provider>().Where(x => x.Id == item.ProviderId).First();
             entity.ProviderName = prov.Name;
-            entity.ProviderAdress = prov.Adress;
             var mar = database.Table<Mark>().Where(x => x.Id == item.MarkId).First();
             entity.Mark = mar.Name;
             result.Add(entity);
@@ -102,7 +101,6 @@ public class AppRepository : IDisposable
             entity.Category = cat.Name;
             var prov = database.Table<Provider>().Where(x => x.Id == item.ProviderId).First();
             entity.ProviderName = prov.Name;
-            entity.ProviderAdress = prov.Adress;
             var mar = database.Table<Mark>().Where(x => x.Id == item.MarkId).First();
             entity.Mark = mar.Name;
             result.Add(entity);

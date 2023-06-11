@@ -21,7 +21,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<AnimalPage>();
         builder.Services.AddSingleton<ProviderPage>();
         builder.Services.AddSingleton<ProductPage>();
-        builder.Services.AddSingleton<StatisticPage>();
+        builder.Services.AddSingleton<ProfitPage>();
         builder.Services.AddSingleton<MarkPage>();
         builder.Services.AddSingleton<TemplatePage>();
         builder.Services.AddSingleton<RevenuePage>();

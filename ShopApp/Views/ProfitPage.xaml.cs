@@ -4,10 +4,10 @@ using System.Reflection;
 
 namespace ShopApp.Views;
 
-public partial class StatisticPage : ContentPage
+public partial class ProfitPage : ContentPage
 {
     private readonly AppRepository _db;
-    public StatisticPage(AppRepository db)
+    public ProfitPage(AppRepository db)
     {
         _db = db;
         InitializeComponent();

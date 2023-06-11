@@ -39,7 +39,7 @@
         </ShellContent>
         <ShellContent
         Title="Прибыль"
-        ContentTemplate="{DataTemplate pages:StatisticPage}">
+        ContentTemplate="{DataTemplate pages:ProfitPage}">
         </ShellContent>
         <ShellContent
         Title="Ревизия"

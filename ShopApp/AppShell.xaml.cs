@@ -12,8 +12,8 @@ public partial class AppShell : Shell
         Routing.RegisterRoute("ProviderPage", typeof(ProviderPage));
         Routing.RegisterRoute("MainPage", typeof(CategoryPage));
         Routing.RegisterRoute("ProductPage", typeof(ProductPage));
-        Routing.RegisterRoute("StatisticPage", typeof(StatisticPage));
-        Routing.RegisterRoute("MarkPage", typeof(StatisticPage));
+        Routing.RegisterRoute("StatisticPage", typeof(ProfitPage));
+        Routing.RegisterRoute("MarkPage", typeof(MarkPage));
         Routing.RegisterRoute("TemplatePage", typeof(TemplatePage));
         Routing.RegisterRoute("RevenuePage", typeof(RevenuePage));
         Routing.RegisterRoute("RevisionPage", typeof(RevisionPage));
