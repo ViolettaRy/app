@@ -12,7 +12,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>ShopApp</ApplicationTitle>
+		<ApplicationTitle>Учет показателей</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.shopapp</ApplicationId>
