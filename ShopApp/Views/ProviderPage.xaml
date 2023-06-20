@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopApp.Views.ProviderPage"
              Title="ProviderPage">
+    <ScrollView>
     <VerticalStackLayout>
         <HorizontalStackLayout>
             <Picker x:Name="pickerCommand" Margin="10,0,0,0" WidthRequest="150" Title="Команда:"/>
@@ -25,4 +26,5 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
     </VerticalStackLayout>
+        </ScrollView>
 </ContentPage>
