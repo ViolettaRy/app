@@ -73,13 +73,7 @@ public partial class AnimalPage : ContentPage
                         }
                         if (isDigit1(Entry.Text))
                         {
-                            if (collectionView.SelectedItem is null)
-                                return;
-
                             var animal = collectionView.SelectedItem as Animal;
-                            if (animal is null)
-                                return;
-
                             animal.Name = Entry.Text;
                             _db.UpdateAnimal(animal);
                             GetAnimals();

@@ -22,6 +22,7 @@ public partial class ProductPage : ContentPage
         pickerCommand.Items.Add("Добавить товар");
         pickerCommand.Items.Add("Удалить упоминание о товаре");
         pickerCommand.Items.Add("Изменить упоминание о товаре");
+        picker4.Items.Add("Не выбрано");
         DatePicker.Date = DateTime.Now;
     }
     private void Clicked(object sender, EventArgs e)
@@ -215,16 +216,9 @@ public partial class ProductPage : ContentPage
                                 int Article = Convert.ToInt32(AddArticle.Text);
                                 if (_db.database.Table<Product>().Where(x => x.Article == Article).Any())
                                 {
-                                    if (collectionView.SelectedItem is null)
-                                        return;
                                     var ProductId = collectionView.SelectedItem as ProductVisible;
-                                    if (ProductId is null)
-                                        return;
-
                                     var templateId = _db.database.Table<Product>().Where(x => x.Id == ProductId.Id).First(); ;
                                     var template = new Product();
-                                    if (templateId is null)
-                                        return;
 
                                     var anim = _db.database.Table<Animal>().Where(x => x.Name.Equals(picker.SelectedItem)).First();
                                     int animId = anim.Id;
@@ -272,12 +266,7 @@ public partial class ProductPage : ContentPage
             {
                 if (collectionView.SelectedItem != null)
                 {
-                    if (collectionView.SelectedItem is null)
-                        return;
-
                     var product = collectionView.SelectedItem as ProductVisible;
-                    if (product is null)
-                        return;
                     _db.DeleteProduct(product.Id);
                     GetProducts();
                 }
@@ -324,7 +313,6 @@ public partial class ProductPage : ContentPage
             picker3.Items.Add(item.Name);
         }
         var temp = _db.GetTemplates();
-        picker4.Items.Add("Не выбрано");
         foreach (var item in temp)
         {
             picker4.Items.Add(item.Article.ToString());

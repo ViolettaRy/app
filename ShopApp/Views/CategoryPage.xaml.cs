@@ -74,13 +74,7 @@ public partial class CategoryPage : ContentPage
                         }
                         if (isDigit1(Entry.Text))
                         {
-                            if (collectionView.SelectedItem is null)
-                                return;
-
                             var Category = collectionView.SelectedItem as Category;
-                            if (Category is null)
-                                return;
-
                             Category.Name = Entry.Text;
                             _db.UpdateCategory(Category);
                             GetCategories();

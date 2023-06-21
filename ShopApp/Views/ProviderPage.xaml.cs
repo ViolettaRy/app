@@ -102,13 +102,7 @@ public partial class ProviderPage : ContentPage
                         {
                             if (isDigit(Entry.Text) && isDigit(Entry2.Text))
                             {
-                                if (collectionView.SelectedItem is null)
-                                    return;
-
                                 var provider = collectionView.SelectedItem as Provider;
-                                if (provider is null)
-                                    return;
-
                                 provider.Name = Entry.Text;
                                 provider.Adress = Entry2.Text;
                                 _db.UpdateProvider(provider);

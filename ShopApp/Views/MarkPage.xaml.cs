@@ -75,13 +75,7 @@ public partial class MarkPage : ContentPage
                         }
                         if (isDigit1(Entry.Text))
                         {
-                            if (collectionView.SelectedItem is null)
-                                return;
-
                             var Mark = collectionView.SelectedItem as Mark;
-                            if (Mark is null)
-                                return;
-
                             Mark.Name = Entry.Text;
                             _db.UpdateMark(Mark);
                             GetMarks();

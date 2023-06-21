@@ -1,5 +1,7 @@
 using ShopApp.Models;
+using System.ComponentModel;
 using System.Text.RegularExpressions;
+using System.Windows.Input;
 
 namespace ShopApp.Views;
 
@@ -156,14 +158,8 @@ public partial class TemplatePage : ContentPage
                                 int Article = Convert.ToInt32(AddArticle.Text);
                                 if (_db.database.Table<TemplateProduct>().Where(x => x.Article == Article).Any())
                                 {
-                                    if (collectionView.SelectedItem is null)
-                                        return;
-
                                     var templateId = _db.database.Table<TemplateProduct>().Where(x => x.Article.Equals(AddArticle.Text)).First();
-
                                     var template = new TemplateProduct();
-                                    if (templateId is null)
-                                        return;
 
                                     var anim = _db.database.Table<Animal>().Where(x => x.Name.Equals(picker.SelectedItem)).First();
                                     int animId = anim.Id;

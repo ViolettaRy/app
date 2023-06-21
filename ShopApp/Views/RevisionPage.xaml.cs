@@ -144,12 +144,7 @@ public partial class RevisionPage : ContentPage
                         {
                             if (isDigit1(AddRevenue.Text) && isDigit1(AddPriceTotal.Text) && isDigit1(AddExpenses.Text) && isDigit1(AddMonth.Text))
                             {
-                                if (collectionView.SelectedItem is null)
-                                    return;
-
                                 var revision = collectionView.SelectedItem as Revision;
-                                if (revision is null)
-                                    return;
 
                                 revision.RevisionTotal = Convert.ToDecimal(AddPriceTotal.Text) - Convert.ToDecimal(AddRevenue.Text) - Convert.ToDecimal(AddExpenses.Text);
                                 revision.RevenueMonth = Convert.ToDecimal(AddRevenue.Text);
@@ -176,12 +171,7 @@ public partial class RevisionPage : ContentPage
             {
                 if (collectionView.SelectedItem != null)
                 {
-                    if (collectionView.SelectedItem is null)
-                        return;
-
                     var revision = collectionView.SelectedItem as Revision;
-                    if (revision is null)
-                        return;
                     _db.DeleteRevision(revision.Id);
                     GetRevision();
                 }

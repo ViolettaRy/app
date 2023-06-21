@@ -147,12 +147,7 @@ public partial class ProfitPage : ContentPage
                         {
                             if (isDigit1(AddRevenue.Text) && isDigit1(AddSalary.Text) && isDigit1(AddExpenses.Text) && isDigit1(AddCostTotal.Text) && isDigit1(AddMonth.Text))
                             {
-                                if (collectionView.SelectedItem is null)
-                                    return;
-
                                 var profit = collectionView.SelectedItem as Profit;
-                                if (profit is null)
-                                    return;
 
                                 profit.ProfitMargin = Convert.ToDecimal(AddRevenue.Text) - Convert.ToDecimal(AddSalary.Text) - Convert.ToDecimal(AddExpenses.Text) - Convert.ToDecimal(AddCostTotal.Text);
                                 profit.RevenueMonth = Convert.ToDecimal(AddRevenue.Text);
@@ -179,12 +174,7 @@ public partial class ProfitPage : ContentPage
             {
                 if (collectionView.SelectedItem != null)
                 {
-                    if (collectionView.SelectedItem is null)
-                        return;
-
                     var profit = collectionView.SelectedItem as Profit;
-                    if (profit is null)
-                        return;
                     _db.DeleteProfit(profit.Id);
                     GetProfit();
                 }

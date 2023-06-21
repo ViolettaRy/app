@@ -103,13 +103,7 @@ public partial class RevenuePage : ContentPage
                         {
                             if (isDigit1(Entry.Text))
                             {
-                                if (collectionView.SelectedItem is null)
-                                    return;
-
                                 var revenue = collectionView.SelectedItem as Revenue;
-                                if (revenue is null)
-                                    return;
-
                                 revenue.RevenueTotal = Convert.ToInt32(Entry.Text);
                                 revenue.Date = DatePicker.Date;
 
@@ -132,12 +126,7 @@ public partial class RevenuePage : ContentPage
             {
                 if (collectionView.SelectedItem != null)
                 {
-                    if (collectionView.SelectedItem is null)
-                        return;
-
                     var revenue = collectionView.SelectedItem as Revenue;
-                    if (revenue is null)
-                        return;
                     _db.DeleteRevenue(revenue.Id);
                     GetRevenue();
                 }
